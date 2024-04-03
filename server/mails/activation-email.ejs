@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        .activation-code {
+            text-align: center;
+            font-size: 36px;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Welcome to Our Platform!</h2>
+        </div>
+        <p>Hello <%= user.name %>,</p>
+        <p>Thank you for registering with us. Please use the activation code below to activate your account. This code will expire in 5 minutes:</p>
+        <div class="activation-code">
+            <%= activationCode %>
+        </div>
+        <p>If you didn't register with us, please ignore this email.</p>
+        <div class="footer">
+            <p>If you have any questions or need assistance, feel free to contact us.</p>
+            <p>Best regards,<br>Your Platform Team</p>
+        </div>
+    </div>
+
+</body>
+</html>
